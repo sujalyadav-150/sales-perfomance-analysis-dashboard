@@ -1,112 +1,157 @@
 # SQLytics Sales Dashboard 🧠📊
 
-An interactive and dynamic sales dashboard built using **Python, MySQL, and Excel**. Designed to extract insights from Superstore data using **SQL queries**, **Power Pivot**, **Pivot Tables**, **KPIs**, and **interactive charts** — all integrated through an ODBC connection for a seamless, real-time analytics experience.
+<p align="center">
+  <img src="./dashboard.png" alt="SQLytics Sales Dashboard" width="100%">
+</p>
+
+---
+
+## 📌 Project Overview
+
+An interactive and dynamic sales dashboard built using **Python, MySQL, and Excel**.
+Designed to extract insights from Superstore data using **SQL queries**, **Power Pivot**, **Pivot Tables**, **KPIs**, and **interactive charts** — all integrated through an **ODBC connection** for a seamless, real-time analytics experience.
 
 ---
 
 ## 🧩 1. Project Workflow Overview
 
-This project follows a proper **ETL pipeline** using three major tools:
+This project follows a structured **ETL pipeline** using three major tools:
 
-- **Python (Pandas)**: Used for data cleaning, preprocessing, and splitting the main dataset into three relational tables (`customers.csv`, `products.csv`, `orders.csv`).
-- **MySQL Workbench**: Cleaned datasets were imported as SQL tables, and powerful queries were executed to derive business insights.
-- **Excel (via ODBC connection)**: Data was pulled dynamically from MySQL into Excel using Power Pivot. KPIs, Pivot Tables, Slicers, and Charts were used to build the final interactive dashboard.
+* **Python (Pandas)**
+  Used for data cleaning, preprocessing, and splitting the main dataset into three relational tables:
+
+  * `customers.csv`
+  * `products.csv`
+  * `orders.csv`
+
+* **MySQL Workbench**
+  Cleaned datasets were imported as SQL tables, and optimized queries were executed to derive business insights.
+
+* **Excel (via ODBC connection)**
+  Data was dynamically connected from MySQL into Excel using Power Pivot. KPIs, Pivot Tables, Slicers, and Charts were used to build the final interactive dashboard.
 
 ---
 
-## 🧹 2. Data Cleaning (in Python)
+## 🧹 2. Data Cleaning (Python - Pandas)
 
-- Removed duplicates and empty rows.
-- Handled missing values.
-- Created a unique `customer_id` for each customer.
-- Split the master dataset into:
-  - `customers` – name, segment, region, etc.
-  - `products` – product name, category, sub-category.
-  - `orders` – order ID, dates, quantity, sales, discount, profit, shipping cost.
+* Removed duplicates and empty rows
+* Handled missing values
+* Created a unique `customer_id`
+* Split dataset into:
+
+  * **Customers Table** – customer details, segment, region
+  * **Products Table** – product, category, sub-category
+  * **Orders Table** – order ID, sales, profit, discount, quantity, shipping
 
 ---
 
 ## 💾 3. SQL Database & Queries
 
-After importing data into MySQL Workbench, the following queries were executed to extract meaningful insights:
+After importing data into MySQL, the following insights were generated:
 
-- **Order with Shipping Delay > 5 Days** – Calculated using `DATEDIFF(ship_date, order_date)`.
-- **Percentage of Total Sales** – Customer-wise or product-wise share of total sales.
-- **Profit by Region** – `SUM(profit)` grouped by region.
-- **Rank Customers by Total Sales** – Used `RANK()` window function.
-- **Running Total Sales by Year** – Used window function for cumulative sales trend.
-- **Sales by Order Priority** – Grouped by order priority.
-- **Sales by Sub-Category** – Insight into performance by sub-category.
-- **Top 10 Customers by Total Sales**
-- **Top 10 Products by Total Sales**
-- **KPIs**: Total sales, quantity, profit for dashboard blocks.
-- **Yearly Sales Trend Analysis**
+* 📦 Orders with **Shipping Delay > 5 Days** using `DATEDIFF()`
+* 📊 **Percentage Contribution** of sales (customer/product-wise)
+* 🌍 **Profit by Region** using `GROUP BY`
+* 🏆 **Customer Ranking** using `RANK()` window function
+* 📈 **Running Total Sales** (Cumulative trend analysis)
+* 🚚 Sales based on **Order Priority**
+* 📦 **Sales by Sub-Category**
+* 👑 **Top 10 Customers by Sales**
+* 🔝 **Top 10 Products by Sales**
+* 📊 **KPIs Calculation**:
 
-> ✅ All queries were tested and saved for reference.
+  * Total Sales
+  * Total Profit
+  * Total Quantity
+* 📅 **Yearly Sales Trend Analysis**
+
+> ✅ All queries were optimized and stored for reuse
 
 ---
 
 ## 📊 4. Excel Dashboard (via ODBC)
 
-### 🔷 KPIs Block (Top Section)
+### 🔷 KPI Section
 
-- Total Orders  
-- Total Sales  
-- Total Profit  
-- Average Discount  
-- Total Quantity  
+* Total Orders
+* Total Sales
+* Total Profit
+* Average Discount
+* Total Quantity
 
-> 🎨 *Enhancements*: Added GIFs and Icons for creative visual appeal.
-
----
-
-### 🔷 Pivot Tables Created
-
-- Month vs. Sales  
-- Customer Name vs. Sales  
-- Month vs. Profit  
-- Region vs. Sales  
+> 🎨 Includes icons and visual enhancements for better UI
 
 ---
 
-### 🔷 Graphs Created
+### 🔷 Pivot Tables
 
-- **Line Plot**: Monthly Sales Trend  
-- **Bar Plot (Interactive)**:
-  - Quantity
-  - Above Average Quantity
-  - Average Quantity
-  - ✅ *Interactive buttons toggle between Sales, Profit, Shipping Cost, Quantity*
-- **Bar Plot**: Top 5 Customers by Sales  
-- **Bar Plot**: Region-wise Sales  
+* Month vs Sales
+* Customer vs Sales
+* Month vs Profit
+* Region vs Sales
 
 ---
 
-### 🔷 Filters & Slicers (Fully Dynamic)
+### 🔷 Charts & Visualizations
 
-- Year  
-- Month  
-- Region  
-- Week  
-- *(Country slicer customized to include selected countries only)*
+* 📈 **Line Chart** → Monthly Sales Trend
+* 📊 **Interactive Bar Chart**:
 
----
-
-## 📌 5. Design & Layout Features
-
-- Followed a **modern dark theme** (black and blue tones).
-- Used **shapes and alignment techniques** for layout.
-- Added **titles, slicers, KPIs, and visuals** as shown in reference image.
-- Created **navigation panel** using buttons and shapes for easy movement across the dashboard.
+  * Quantity
+  * Above Average Quantity
+  * Average Quantity
+  * Toggle buttons for Sales / Profit / Shipping / Quantity
+* 🧑‍💼 **Top 5 Customers by Sales**
+* 🌍 **Region-wise Sales Distribution**
 
 ---
 
-## 📎 6. Final Thoughts
+### 🔷 Filters & Slicers
 
-- ✅ **Dynamic Dashboard**: All visuals respond to slicers in real-time via SQL-Excel ODBC connection.
-- ✅ **Professional Structure**: Clean, responsive layout.
-- ✅ **Scalable Design**: Easy to extend with more KPIs or visualizations.
+* Year Filter
+* Month Filter
+* Region Filter
+* Week Filter
+* Country Filter (customized)
+
+> ✅ Fully dynamic — all visuals update instantly
 
 ---
 
-> 🙌 Built with dedication, creativity, and pure Excel + SQL power!
+## 🎨 5. Dashboard Design & Layout
+
+* Modern **dark theme UI** (black + blue palette)
+* Clean layout using shapes and alignment
+* Interactive slicers and navigation buttons
+* Well-structured KPI blocks and visual hierarchy
+
+---
+
+## 🚀 6. Key Features
+
+* ✅ Real-time data connection using **ODBC**
+* ✅ Fully interactive dashboard
+* ✅ Clean and scalable design
+* ✅ Industry-level SQL + Excel integration
+
+---
+
+## 📎 7. Final Thoughts
+
+This project demonstrates how **Python, SQL, and Excel** can be combined to build a **powerful business intelligence solution**.
+
+It reflects:
+
+* Strong data cleaning skills
+* SQL analytical thinking
+* Dashboard design expertise
+
+---
+
+## 🙌 Author
+
+**Sujal Yadav**
+
+---
+
+⭐ *If you like this project, don’t forget to star the repo!*
