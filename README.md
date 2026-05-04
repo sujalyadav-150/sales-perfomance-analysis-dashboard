@@ -1,3 +1,4 @@
+# SQLytics Sales Dashboard 🧠📊
 
 ## 📊 Dashboard Preview
 
