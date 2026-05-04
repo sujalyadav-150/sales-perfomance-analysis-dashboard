@@ -1,9 +1,9 @@
-<img width="1920" height="815" alt="Screenshot (701)" src="https://github.com/user-attachments/assets/75b34b51-4328-4ffd-a01c-48e38d78e21e" /># SQLytics Sales Dashboard 🧠📊
 
 ## 📊 Dashboard Preview
 
 
 
+<img width="1920" height="815" alt="Screenshot (701)" src="https://github.com/user-attachments/assets/75b34b51-4328-4ffd-a01c-48e38d78e21e" /># SQLytics Sales Dashboard 🧠📊
 
 ---
 
