@@ -1,6 +1,6 @@
 # SQLytics Sales Dashboard 🧠📊
 <p align="center">
-  <img src="C:\Users\hp\OneDrive\Pictures\Screenshots\Screenshot (701).png" width="900"/>
+  <img src="Screenshot (701).png" width="900"/>
 </p>
 ---
 
