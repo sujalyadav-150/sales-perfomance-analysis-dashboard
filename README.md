@@ -1,5 +1,9 @@
 # SQLytics Sales Dashboard 🧠📊
-<img src="images/dashboard.png" width="900"/>
+
+<p align="center">
+  <img src="images/dashboard.png" alt="SQLytics Sales Dashboard" width="900"/>
+</p>
+
 ---
 
 ## 📌 Project Overview
