@@ -3,7 +3,7 @@
 ## 📊 Dashboard Preview
 
 <p align="center">
-  <img src="dashboard.png" width="900"/>
+  <img src="Screenshot (701).png" width="900"/>
 </p>
 
 
