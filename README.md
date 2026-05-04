@@ -3,7 +3,7 @@
 ## 📊 Dashboard Preview
 
 <p align="center">
-  <img src="images/dashboard.png" alt="SQLytics Sales Dashboard" width="900"/>
+  <img src="C:\Users\hp\OneDrive\Pictures\Camera Roll\Desktop\images" alt="SQLytics Sales Dashboard" width="900"/>
 </p>
 
 ---
