@@ -1,5 +1,7 @@
 # SQLytics Sales Dashboard 🧠📊
 
+## 📊 Dashboard Preview
+
 <p align="center">
   <img src="images/dashboard.png" alt="SQLytics Sales Dashboard" width="900"/>
 </p>
